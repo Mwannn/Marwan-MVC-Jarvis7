@@ -1,21 +1,5 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Daftar Tugas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <style>
-      .title {
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-        font-size: 2em;
-      }
-    </style>
-  </head>
-  
-  <body>
+@extends('template')
+@section('content')
     <div class="container">
       <div class="text-center title">Daftar Tugas</div>
       <hr> 
