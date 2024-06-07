@@ -1,4 +1,5 @@
 @extends('template')
+
 @section('content')
 
-@andsection('')
+@andsection('content')

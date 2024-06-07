@@ -3,10 +3,9 @@
     @include('partials._head')
 
 <body class="sb-nav-fixed"> 
-        @include('partials._nav')
-    <div id="layoutSidenav_nav">
-            
-        <div id="layoutSidenav">
+    @include('partials._nav')
+    <div id="layoutSidenav">
+        @include('partials._sidebar')
             
             <div id="layoutSidenav_content">
                 <main>
