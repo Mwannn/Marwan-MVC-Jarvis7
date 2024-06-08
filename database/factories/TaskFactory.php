@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Faker\Factory as Faker;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Task>
@@ -16,11 +17,12 @@ class TaskFactory extends Factory
      */
     public function definition(): array
     {
+        $faker = Faker::create();
         return [
-            "name" => fake()->name(),
+            "name" => $faker->name(),
             "deadline" => now(),
-            "status" => fake()->'Belum selesai',
-            "description" => fake()->paragraph()
+            "status" => 'Belum selesai', // Fix: Remove fake()-> and use a string literal
+            "description" => $faker->paragraph()
         ];
     }
 }

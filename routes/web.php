@@ -17,3 +17,6 @@ Route::get('/', function () {
  */
 //route untuk menampilkan daftar tugas
 Route::get('/tasks', [TaskController::class, 'index']);
+Route::get('/tasks/list', [TaskController::class, 'list'])->name('tasks.list');
+Route::get('/tasks/create', [TaskController::class, 'create'])->name('tasks.create');
+Route::post('/tasks/store', [TaskController::class, 'store'])->name('tasks.store');

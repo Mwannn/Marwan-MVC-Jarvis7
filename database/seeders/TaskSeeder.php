@@ -20,6 +20,6 @@ class TaskSeeder extends Seeder
             'description'=> "ini tugas mtk"
         ]);
 
-        Task::factory(5)->create();
+        Task::factory(10)->create();
     }
 }
