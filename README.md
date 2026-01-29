@@ -60,6 +60,11 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+## License & Copyright
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+© 2024 **Marwan Wisnu**. All Rights Reserved.
+
+This project (Jarvis 7.0) is a proprietary system developed by Marwan Wisnu. 
+Unauthorized copying, modification, distribution, or use of this software is strictly prohibited without explicit permission from the creator.
+
+The underlying Laravel framework remains open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
