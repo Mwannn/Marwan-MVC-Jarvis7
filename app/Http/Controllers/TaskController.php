@@ -31,12 +31,53 @@ class TaskController extends Controller
     }
     public function store(Request $request)
     {
-        //dd($request->all());
-        $data =$request->validate([
+        $validatedData = $request->validate([
             'name' => "required|max:255|min:3",
             'deadline'=>"required|date",
-            'status'=> "required|in:Belum dikerjakan,Sedang dikerjakan, Selesai",
+            // 'status'=> "required", // Default to Pending if not provided
             'description'=>'required'
         ]);
+
+        $task = new Task();
+        $task->name = $request->name;
+        $task->deadline = $request->deadline;
+        $task->status = $request->status ?? 'Pending';
+        $task->description = $request->description;
+        $task->save();
+
+        return redirect('/tasks')->with('success', 'New protocol initialized successfully.');
+    }
+
+    public function edit($id)
+    {
+        $task = Task::findOrFail($id);
+        return view('task.edit', compact('task'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'name' => "required|max:255|min:3",
+            'deadline'=>"required|date",
+            'status'=> "required",
+            'description'=>'required'
+        ]);
+
+        $task = Task::findOrFail($id);
+        $task->name = $request->name;
+        $task->deadline = $request->deadline;
+        $task->status = $request->status;
+        $task->description = $request->description;
+        $task->save();
+
+        return redirect('/tasks')->with('success', 'Protocol parameters updated.');
+    }
+
+    public function destroy($id)
+    {
+        $task = Task::findOrFail($id);
+        $task->delete();
+
+        return redirect('/tasks')->with('success', 'Protocol terminated and removed from archives.');
     }
 }
