@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Jarvis Styles */
+:root {
+    --primary: #00f3ff;
+    --text-main: #e0e0e0;
+    --bg-main: #0a0a12;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+.text-glow {
+    text-shadow: 0 0 10px var(--primary);
+}
+
+.panel-glass {
+    background: rgba(16, 16, 24, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 243, 255, 0.1);
+}
